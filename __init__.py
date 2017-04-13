@@ -19,6 +19,35 @@ def risk():
     return render_template("index.html", title="hello, world", value = tags)
 
 
+@app.route("/log")
+@app.route("/log/")
+def log():
+    tags = Markup("<b>Submit new log:</b>")
+    return render_template("log.html", title="hello, world", value = tags)
+
+
+@app.route("/log/submit", methods=['POST'])
+def submitLog():
+    date = request.form['date']
+    time = request.form['time']
+    macAddress = request.form['macAddress']
+    clientExist = request.form['clientExist']
+    ipAddress = request.form['ipAddress']
+    internalIP = request.form['internalIP']
+    knownIP = request.form['knownIP']
+    userID = request.form['userID']
+    userExist = request.form['userExist']
+    loginSuccess = request.form['loginSuccess']
+    newLog = [date, time ,macAddress, clientExist, ipAddress, internalIP, knownIP, userID, userExist, loginSuccess]
+    Controller.insertNewLog(" ".join(newLog))
+    #Controller.cleanUpMess()
+    result = Controller.getLatestLog()
+    #tags = Markup("<b>Update logfile:</b><br />" + jsonify(result))
+    #return render_template("index.html", title="hello, world", value = tags)
+    return(jsonify(result))
+    #return json.dumps({'status':'OK','user':date,'pass':time});
+
+
 @app.route("/hello")
 def hello():
     return jsonify(Controller.hellowWorld())
