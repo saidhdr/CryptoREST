@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-from localController import MyMethods
+from flask import Flask, jsonify, request
+from localController import MyMethods, LogFileStructMapper, IpType
 
 Controller = MyMethods()
 app = Flask(__name__)
@@ -10,6 +10,7 @@ app = Flask(__name__)
 def index():
     return jsonify("hello, world")
 
+
 @app.route("/hello")
 def hello():
     return jsonify(Controller.hellowWorld())
@@ -18,6 +19,13 @@ def hello():
 @app.route("/getalllog")
 def getAllLog():
     return jsonify(Controller.getLatestLog())
+
+
+@app.route("/risk/isuserknown", methods=['GET'])
+def getIsUserKnown():
+    userid = request.args.get('username', None)
+    return jsonify(Controller.isUserKnown(userid))
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, threaded=True, debug=True)
