@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, render_template, Markup, json
 from localController import MyMethods, LogFileStructMapper, IpType
+from datetime import datetime
 
 Controller = MyMethods()
 app = Flask(__name__)
