@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Crypto - {{ title }} </title>
+
+    <!-- Bootstrap shitty for css -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<nav class="navbar navbar-static-top navbar-inverse bg-inverse">
+    <a class="navbar-brand" href="/">Crypto - Home</a>
+    <a class="navbar-brand" href="/risk">Crypto - risk</a>
+    <a class="navbar-brand" href="/log">Crypto - log</a>
+</nav><!-- /.navbar -->
+
+<!-- Bootstrap JavaScript -->
+<script src="{{ url_for('static', filename='js/jquery-3.1.1.slim.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+{% block body %}
+{% endblock %}
