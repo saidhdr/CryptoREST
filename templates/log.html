@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<body>
+	<br></br>
+	<div style="padding: 0 50px 0 50px;">
+	 	{{ value }}
+        <br /> 
+   
+    <script src="{{ url_for('static', filename='js/jquery-1.9.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <form action="/log/submit" method="post" role="form">
+        Date: <input  id="txtDate" name="date" class="form-control" size="200" placeholder="20170413" required autofocus> <br />
+        Time: <input  id="txtTime" name="time" class="form-control" size="200" placeholder="20:55:55" required><br />
+        Mac_ Address: <input  id="txtMac" name="macAddress" class="form-control" size="200" placeholder="A1:28:F4:75:B3:CE" required><br />
+        Client_Exist: <input  id="txtClientExist" name="clientExist" class="form-control" size="200" placeholder="true" required><br />
+        IP: <input  id="txtIP" name="ipAddress" class="form-control" size="200" placeholder="192.168.0.255" required><br />
+        Internal_IP: <input  id="txtInternalIP" name="internalIP" class="form-control" size="200" placeholder="true" required><br />
+        Known_IP: <input  id="txtKnownIP" name="knownIP" class="form-control" size="200" placeholder="ture" required><br />
+        User_id: <input  id="txtUserID" name="userID" class="form-control" size="200" placeholder="batman" required><br />
+        User_Exist: <input  id="txtUserExist" name="userExist" class="form-control" size="200" placeholder="true" required><br />
+        Login_Success: <input  id="txtLoginSuccess" name="loginSuccess" class="form-control" size="200" placeholder="true" required><br />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+{% endblock %}
