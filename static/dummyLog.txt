@@ -1,0 +1,8 @@
+20140617 06:42:52 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true false
+20140618 07:42:52 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true false
+20140618 05:42:55 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true true
+20140618 05:42:59 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true true
+20140618 05:42:45 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true true
+20140618 05:42:47 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true true
+20170410 07:42:52 A1:28:F4:75:B3:CE true 192.168.0.255 true false batman true false
+20170410 07:42:52 A1:28:F4:75:B3:CE true 192.168.0.125 true true batman true false

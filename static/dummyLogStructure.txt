@@ -1,0 +1,1 @@
+date time mac-address client-exist(true,false) ip internal-ip(true,false) known-ip(true,false) user-id user-exist(true,false) success(true false)
